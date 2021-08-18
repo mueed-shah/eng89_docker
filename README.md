@@ -54,3 +54,24 @@ Docker vs VM uses : [Source](https://www.aquasec.com/cloud-native-academy/docker
 <h2> Micro-services architecture vs Monolith and use cases </h2>
 
 <h2> is Micro-services architecture always useful? </h2>
+
+
+Commands
+
+
+`docker run -d  -p 4000:4000 docs/docker.github.io`
+
+`docker exec -it 541a12610cbe sh`
+
+` docker ps -a` see containers status
+
+`docker images` see images
+
+`docker rmi <name> -f` forcefully remove a container
+
+**How to transfer files from localhost to container or vise versa**
+- Get file directory from localhost
+- Get container ID
+- Get the path on container you want to export the file to
+- `docker cp <src-path> <container>:<dest-path> `
+- `docker cp index 273a24b429cd:/usr/share/nginx/html`
