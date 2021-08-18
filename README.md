@@ -75,3 +75,4 @@ Commands
 - Get the path on container you want to export the file to
 - `docker cp <src-path> <container>:<dest-path> `
 - `docker cp index 273a24b429cd:/usr/share/nginx/html`
+- `docker commit 273a24b429cd mueed/eng89_mueed_docker_task:tagname` docker commit <container> <repo:tag>
