@@ -8,8 +8,7 @@ Docker is an open platform that is used for running applications and packaging t
 
 **VMs** tools are easier to access and simpler to work with whereas Docker has a more complicated ecosystem that conists of docker-managed and third-party tools.
 
-
-<h2> Why should we use docker vs VMs </h2>
+<hr>
 
 **Paypal uses Docker** to drive a "cost efficiency and enterprise-grade-security" for its infrastructure. Docker has helped reduce the numbers of VMs it needs to run.
 
@@ -17,10 +16,18 @@ Docker is an open platform that is used for running applications and packaging t
 
 **Running microservices applications**: Docker lets you run each microservice that makes up an application in its own container. In this way, it enables a distributed architecture.
 
+![diagram](contrainer-vs-vm.jpg)
+
 Docker vs VM uses : [Source](https://www.aquasec.com/cloud-native-academy/docker-container/docker-containers-vs-virtual-machines/)
 
 
 <h2> Benefits of Docker </h2>
+
+
+<p align="center">
+  <img src="benefits-of-docker.png" alt="benefits-of-docker-image"/>
+</p>
+
 
 <h2> Who is using Docker? </h2>
 
