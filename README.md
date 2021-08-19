@@ -81,3 +81,32 @@ Commands
 - `docker run -d -p 50:80 mueed/eng89_automated_nginx_task` running the docker file
 - `$ docker rmi 58f1466c019c -f` to delete a image or a container 
 
+## Volume
+
+```
+--driver , -d	local	Specify volume driver name
+--label		Set metadata for a volume
+--name		Specify volume name
+--opt , -o		Set driver specific options
+```
+| Command      | Description |
+| ----------- | ----------- |
+| docker volume create    | Create a volume       |
+| docker volume inspect   | Display detailed information on one or more volumes  |
+| docker volume ls    | 	List volumes |
+| docker volume prune   | Remove all unused local volumes  |
+| docker volume rm   | Remove one or more volumes|
+
+```
+Examples
+Create a volume and then configure the container to use it:
+
+$ docker volume create hello
+
+hello
+
+$ docker run -d -v hello:/world busybox ls /world
+The mount is created inside the container’s /world directory. Docker does not support relative paths for mount points inside the container.
+
+Multiple containers can use the same volume in the same time period. This is useful if two containers need access to shared data. For example, if one container writes and the other reads the data.
+```
