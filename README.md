@@ -78,5 +78,6 @@ Commands
 - `docker commit 273a24b429cd mueed/eng89_mueed_docker_task:tagname` docker commit <container> <repo:tag>
 - `Dockerfile` to create our own image from an existing image
 - `docker build -t mueed/eng89_automated_nginx_task .` build the dockerfile we just created 
-- `docker run -d -p 50:80 mueed/eng89_automated_nginx_task` running the docker file 
+- `docker run -d -p 50:80 mueed/eng89_automated_nginx_task` running the docker file
+- `$ docker rmi 58f1466c019c -f` to delete a image or a container 
 
