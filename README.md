@@ -78,7 +78,7 @@ Commands
 - `docker commit 273a24b429cd mueed/eng89_mueed_docker_task:tagname` docker commit <container> <repo:tag>
 - `Dockerfile` to create our own image from an existing image
 - `docker build -t mueed/eng89_automated_nginx_task .` build the dockerfile we just created 
-- `docker run -d -p 50:80 mueed/eng89_automated_nginx_task` running the docker file
+- `docker run -d -p 50:80 mueed/eng89_automated_nginx_task` running the docker file (try without -d)
 - `$ docker rmi 58f1466c019c -f` to delete a image or a container 
 
 ## Volume
@@ -109,4 +109,24 @@ $ docker run -d -v hello:/world busybox ls /world
 The mount is created inside the container’s /world directory. Docker does not support relative paths for mount points inside the container.
 
 Multiple containers can use the same volume in the same time period. This is useful if two containers need access to shared data. For example, if one container writes and the other reads the data.
+```
+
+`docker run -d -v $PWD/index.html:/usr/share/nginx/html/ -p 500:80 mueed/eng89_automated_nginx_task` this only works if the image is rebuilt
+
+**For Docker**:
+- It is neccessary we ask a team what dependencies it has
+- What ports should we leave open
+
+`docker run -d -v $PWD/:/usr/share/nginx/html/ -p 500:80 mueed/eng89_automated_nginx_task`
+`docker build -t mueed/eng89_flask_task:v1 .`
+`docker run -p 5000:5000 mueed/eng89_flask_task:v3`
+
+```Docker
+FROM python:3.8-slim-buster
+WORKDIR /usr/src/app
+#COPY requirements.txt requirements.txt
+RUN pip3 install flask
+COPY . .
+EXPOSE 5000
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0" ]
 ```

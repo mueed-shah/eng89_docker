@@ -11,7 +11,7 @@ FROM nginx
 LABEL MAINTAINER=mueed
 
 # copy data as index
-COPY index.html /usr/share/nginx/html
+COPY web/index.html /usr/share/nginx/html/
 # copies index.html to the nginx default index
 
 # adding the port

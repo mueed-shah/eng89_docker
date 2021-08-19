@@ -1,3 +1,6 @@
 index.html
 benefits-of-docker.png
 contrainer-vs-vm.jpg
+app/
+flask/
+environment/
