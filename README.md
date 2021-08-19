@@ -76,3 +76,7 @@ Commands
 - `docker cp <src-path> <container>:<dest-path> `
 - `docker cp index 273a24b429cd:/usr/share/nginx/html`
 - `docker commit 273a24b429cd mueed/eng89_mueed_docker_task:tagname` docker commit <container> <repo:tag>
+- `Dockerfile` to create our own image from an existing image
+- `docker build -t mueed/eng89_automated_nginx_task .` build the dockerfile we just created 
+- `docker run -d -p 50:80 mueed/eng89_automated_nginx_task` running the docker file 
+
